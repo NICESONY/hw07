@@ -1,5 +1,6 @@
 package com.example.hw07.leenakyeong;
 
+<<<<<<< HEAD
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -34,4 +35,10 @@ public class NoticeService1 {
 		noticeRepository.save(notice);
 	
 	}
+=======
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface NoticeService1 extends JpaRepository<Notice1, Integer> {
+
+>>>>>>> 5b3c8f69d5c9c97960b640522ea56cb340344b81
 }
