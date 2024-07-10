@@ -1,12 +1,13 @@
 package com.example.hw07.leenakyeong;
 
-<<<<<<< HEAD
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service("leenakyeongNoticeService1")
 public class NoticeService1 {
 
 	@Autowired
@@ -17,11 +18,11 @@ public class NoticeService1 {
 		noticeRepository.save(notice);
 	}
 	
-	public List<Notice1> readlist(){
+	public List<Notice1> readlist1(){
 		return noticeRepository.findAll();
 	}
 	
-	public Notice1 readdetail(Integer id) {
+	public Notice1 readdetail1(Integer id) {
 		
 		Optional <Notice1> o = noticeRepository.findById(id);
 		return o.get();
@@ -35,10 +36,5 @@ public class NoticeService1 {
 		noticeRepository.save(notice);
 	
 	}
-=======
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface NoticeService1 extends JpaRepository<Notice1, Integer> {
-
->>>>>>> 5b3c8f69d5c9c97960b640522ea56cb340344b81
 }
+

@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
-@Entity
+@Entity(name="baekhyeokgiNotice")
 public class Notice {
 
 	@Id
