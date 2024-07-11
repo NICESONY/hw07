@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
 <body>
+
+<h1> Read List </h1>
+
+<a href="/notice/create">CREATE</a><br><br>
+
+<th:block th:each="notice: ${notices}">
+		[[${notice.nid}]] /
+		<a th:href="@{|/notice/readdetail/${notice.nid}|}" th:text="${notice.ntitle}"></a>
+			/ [[${board.bdate}]]<br>
+</th:block>
 
 </body>
 </html>
