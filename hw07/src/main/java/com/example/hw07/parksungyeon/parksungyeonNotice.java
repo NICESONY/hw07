@@ -10,7 +10,7 @@ import lombok.Data;
 
 @Data
 @Entity(name="parksungyeonNotice")
-public class Notice {
+public class parksungyeonNotice {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;

@@ -21,7 +21,7 @@ public class parksungyeonNoticeService {
 	private S3Service s3service;
 	
 	// 사진도 가져오는 법
-	public void create(Notice notice, MultipartFile file1) throws IOException {
+	public void create(parksungyeonNotice notice, MultipartFile file1) throws IOException {
 		
 		
 		// UUID 를 추가해서 사진 이름과 같이 DB로 뽑아 준다.
@@ -39,7 +39,7 @@ public class parksungyeonNoticeService {
 	
 	
 	
-	public List<Notice> readlist(){
+	public List<parksungyeonNotice> readlist(){
 		return noticeRepository.findAll();	
 	}
 }

@@ -22,26 +22,26 @@ public class parksungyeonNoticeController {
 	
 
 		
-	@GetMapping("/index")
-	public String index() {
-		return "index";
+	@GetMapping("/parksungyeonindex")
+	public String parksungyeonindex() {
+		return "parksungyeonindex";
 		
 		}
 	
-	@GetMapping("/create")
-	public String create() {
-		return "create";
+	@GetMapping("/parksungyeoncreate")
+	public String parksungyeoncreate() {
+		return "parksungyeoncreate";
 		
 		}
 	
 	
-	@PostMapping("/create")
-	public String create(@ModelAttribute Notice notice,
+	@PostMapping("/parksungyeoncreate")
+	public String parksungyeoncreate(@ModelAttribute parksungyeonNotice notice,
 						 @RequestParam("file") MultipartFile file
 			) throws IOException {
 		
 		noticeService.create(notice, file);
-		return "redirect:/index";
+		return "redirect:/parksungyeonindex";
 		
 		}
 	
