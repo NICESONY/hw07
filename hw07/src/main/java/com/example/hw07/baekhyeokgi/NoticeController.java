@@ -32,7 +32,7 @@ public class NoticeController {
 		return "notice/readlist";
 	}
 	
-	@GetMapping("/readdetail/{bid}")
+	@GetMapping("/readdetail/{nid}")
 	public String readdetail(@PathVariable("nid") Integer nid,
 							Model model) {
 		model.addAttribute("notice", noticeService.readdetail(nid));
