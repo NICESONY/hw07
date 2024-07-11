@@ -3,8 +3,6 @@ package com.example.hw07.leenakyeong;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import com.example.hw07.leenakyeong.Reply;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,10 +13,10 @@ import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 @Data
-@Entity
+@Entity(name="leenakyeongNotice1")
 public class Notice1 {
 	
-	@Id
+		@Id
 	   @GeneratedValue(strategy=GenerationType.IDENTITY) // 자동 증가 
 	   private Integer id;
 	   
@@ -31,8 +29,8 @@ public class Notice1 {
 	   
 	   private LocalDateTime date;
 	   
-	   @OneToMany(mappedBy="board", cascade=CascadeType.REMOVE)
-	   private List<Reply> replyList;
+	   @OneToMany(mappedBy="notice", cascade=CascadeType.REMOVE)
+	   private List<Comment1> replyList;
 	
 
 }

@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-@Controller
-public class NoticeController {
+@Controller("parksungyeonNoticeController")
+public class parksungyeonNoticeController {
 	@Autowired
-	NoticeService noticeService;
+	parksungyeonNoticeService noticeService;
 	
 	@Value("${cloud.aws.s3.endpoint}")
 	private String downpath;

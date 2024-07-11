@@ -9,12 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-@Service
-public class NoticeService {
+@Service("parksungyeonNoticeService")
+public class parksungyeonNoticeService {
 	
 	
 	@Autowired
-	private NoticeRepository noticeRepository;
+	private parksungyeonNoticeRepository noticeRepository;
 	
 	
 	@Autowired

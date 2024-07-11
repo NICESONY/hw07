@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
-@Entity
+@Entity(name="parksungyeonNotice")
 public class Notice {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
