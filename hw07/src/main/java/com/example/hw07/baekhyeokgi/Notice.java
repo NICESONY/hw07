@@ -17,16 +17,16 @@ public class Notice {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer nid;           //게시물 번호
+	private Integer id;           //게시물 번호
 
-	private String ntitle;         //게시물 제목
+	private String title;         //게시물 제목
 	
-	private String ncontent;       //게시물 내용
+	private String content;       //게시물 내용
 	
-	private LocalDateTime ndate;   //게시물 작성일
+	private LocalDateTime date;   //게시물 작성일
 
     @OneToMany(mappedBy = "notice", cascade = CascadeType.REMOVE) 
-    private List<Reply> replyList; 
+    private List<Reply> answerList; 
     
 	
 }
