@@ -12,36 +12,36 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-@Controller
-public class NoticeController {
+@Controller("parksungyeonNoticeController")
+public class parksungyeonNoticeController {
 	@Autowired
-	NoticeService noticeService;
+	parksungyeonNoticeService noticeService;
 	
 	@Value("${cloud.aws.s3.endpoint}")
 	private String downpath;
 	
 
 		
-	@GetMapping("/index")
-	public String index() {
-		return "index";
+	@GetMapping("/parksungyeonindex")
+	public String parksungyeonindex() {
+		return "parksungyeonindex";
 		
 		}
 	
-	@GetMapping("/create")
-	public String create() {
-		return "create";
+	@GetMapping("/parksungyeoncreate")
+	public String parksungyeoncreate() {
+		return "parksungyeoncreate";
 		
 		}
 	
 	
-	@PostMapping("/create")
-	public String create(@ModelAttribute Notice notice,
+	@PostMapping("/parksungyeoncreate")
+	public String parksungyeoncreate(@ModelAttribute parksungyeonNotice notice,
 						 @RequestParam("file") MultipartFile file
 			) throws IOException {
 		
 		noticeService.create(notice, file);
-		return "redirect:/index";
+		return "redirect:/parksungyeonindex";
 		
 		}
 	

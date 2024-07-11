@@ -9,8 +9,8 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
-@Entity
-public class Notice {
+@Entity(name="parksungyeonNotice")
+public class parksungyeonNotice {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
