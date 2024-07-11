@@ -10,11 +10,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service("parksungyeonNoticeService")
-public class NoticeService {
+public class parksungyeonNoticeService {
 	
 	
 	@Autowired
-	private NoticeRepository noticeRepository;
+	private parksungyeonNoticeRepository noticeRepository;
 	
 	
 	@Autowired
