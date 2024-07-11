@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2> Read Detail </h2>
+<a href="/notice/readlist">List</a><br><br>
+
+Id : [[${notice.nid}]] <br>
+Title : [[${notice.ntitle}]]<br>
+Content : [[${notice.ncontent}]]<br>
+Date : [[${notice.ndate}]]<br>
+
+<br><br>
+<p><a th:href="@{|/notice/update/${notice.nid}|}"> update</a>
+<p><a th:href="@{|/notice/delete/${notice.nid}|}"> delete</a>
+<br>
+
+<h4>Create Reply</h4>
+
+	<form action="/reply/create" method="post">
+		<input type="hidden" name="nid" th:value="${notice.nid}"/>
+		<p>Content : <input type="text" name="rcontent">
+		<input type="submit" value="create">
+	</form>
+	
+</body>
+</html>
